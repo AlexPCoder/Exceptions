@@ -1,5 +1,7 @@
 
-@
-java:S3457"%String contains no format specifiers.(Šª„ıÿÿÿÿ
-E	java:S106"+Replace this use of System.out by a logger.(Šª„ıÿÿÿÿ
-E	java:S106"+Replace this use of System.out by a logger.(Ğö¶üÿÿÿÿ
+
+java:S1192"MDefine a constant instead of duplicating this literal "accountId001" 3 times.(Å”Ñş8õë°Û„2J$3f392358-cbfd-4c33-8da2-caac74789f11
+r	java:S106"+Replace this use of System.out by a logger.(Óı¦ıÿÿÿÿ8€ì°Û„2J$ac00fc7b-d8a4-45fe-8365-1772fec6606b
+r	java:S106"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ8ƒì°Û„2J$782aa832-738c-4d31-9e84-4862f1547c6a
+r	java:S106"+Replace this use of System.out by a logger.(®ãğŞÿÿÿÿÿ8„ì°Û„2J$2e1375a4-9c88-489f-86e5-7011387af28a
+F	java:S106 "+Replace this use of System.out by a logger.(ôï—o8ğğ‘İ„2

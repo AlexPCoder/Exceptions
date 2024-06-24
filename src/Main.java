@@ -1,15 +1,35 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import exceptions.WrongAccountException;
+import exceptions.WrongCurrencyException;
+import exceptions.WrongOperationException;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+public class Main {
+    private static BankApplication bankApp;
+
+    public static void main(String[] args) {
+
+        bankApp = new BankApplication();
+
+
+        processWrapper("accountId000", 50, "USD");
+        processWrapper("accountId003", 250, "HRV");
+        processWrapper("accountId001", 50, "EUR");
+        processWrapper("accountId001", 50, "USD");
+        processWrapper("accountId001", 2000, "USD");
+    }
+
+    public static void processWrapper(String accountId, int amount, String currency) {
+        try {
+            if (bankApp != null) {
+                bankApp.process(accountId, amount, currency);
+            } else {
+                System.out.println("BankApplication object is not initialized.");
+            }
+        } catch (WrongOperationException e) {
+            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Сталася помилка при процесінгу, спробуйте ще раз");
+        } finally {
+            System.out.println("Дякуємо, що скористалися нашим сервісом");
         }
     }
 }
